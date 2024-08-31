@@ -12,21 +12,27 @@ This project is a simple banking backend service implemented in Go. It allows us
 ## requirements
 - golang 1.23
 
+## Clone
+```sh
+   git clone git@github.com:lonmarsDev/banking-backend.git
+   cd banking-backend
+```
+
 ## how to run api server
 on root project directory do
-```
+```sh
 go run ./cmd/main.go
 ```
 
 log will see like this
-``
+```sh
 2024/08/31 01:14:32 INFO Starting server on :8383
-``
+```
 
 ## Testing api
 
 Fist of all need to create account
-```
+```sh
 curl --location --request POST 'http://localhost:8383/create-account' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -35,7 +41,7 @@ curl --location --request POST 'http://localhost:8383/create-account' \
 ```
 
 Deposit
-```
+```sh
 curl --location --request POST 'http://localhost:8383/deposit' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -45,7 +51,7 @@ curl --location --request POST 'http://localhost:8383/deposit' \
 ```
 
 Withdrawal
-```
+```sh
 curl --location --request POST 'http://localhost:8383/withdraw' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -55,12 +61,12 @@ curl --location --request POST 'http://localhost:8383/withdraw' \
 ```
 
 View Balance
-```
+```sh
 curl --location --request GET 'http://localhost:8383/view-balance?id=1'
 ```
 
 Get SOA
-```
+```sh
 curl --location --request GET 'http://localhost:8383/get-soa?id=1'
 ```
 
